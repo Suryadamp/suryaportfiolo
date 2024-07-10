@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import download from "../assets/img/SuryaSJ.pdf";
 import heart from "../assets/img/heart.png";
+import react from "../assets/img/react-svgrepo-com.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -12,7 +13,7 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["MERN Stack", "React js", "Node js", "FullStack Developer"];
+  const toRotate = ["MERN Stack", "React js", "Node js","React Native", "FullStack Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -108,7 +109,7 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                 >
-                  <img src={heart} alt="heart" />
+                  <img src={react} alt="heart" />
                 </div>
               )}
             </TrackVisibility>

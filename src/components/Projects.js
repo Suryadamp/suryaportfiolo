@@ -6,6 +6,9 @@ import projImg3 from "../assets/img/Chat-App3.png";
 import bookImg1 from "../assets/img/React-App.png";
 import bookImg2 from "../assets/img/React-App (1).png";
 import bookImg3 from "../assets/img/React-App (2).png";
+import tImg1 from "../assets/img/tapp1 (1).png";
+import tImg2 from "../assets/img/tapp1 (2).png";
+import tImg3 from "../assets/img/tapp1 (3).png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -33,10 +36,27 @@ export const Projects = () => {
     {
       title: "SocialMedia ",
       description: "Design & Development",
+      imgUrl: tImg1,
+    },
+    {
+      title: "Movie List",
+      description: "Design & Development",
+      imgUrl: tImg2,
+    },
+    {
+      title: "Response Converstaion",
+      description: "Design & Development",
+      imgUrl: tImg3,
+    },
+  ];
+  const projects3 = [
+    {
+      title: "Booking App",
+      description: "Design & Development",
       imgUrl: bookImg1,
     },
     {
-      title: "Chat Converstation",
+      title: "Booking Converstation",
       description: "Design & Development",
       imgUrl: bookImg2,
     },
@@ -74,10 +94,10 @@ export const Projects = () => {
                         <Nav.Link eventKey="first">Chat App</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Blog App</Nav.Link>
+                        <Nav.Link eventKey="second">Movie App</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third">Booking App</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -93,19 +113,25 @@ export const Projects = () => {
                           })}
                         </Row>
                       </Tab.Pane>
-                      {/* <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane> */}
+                      <Tab.Pane eventKey="second">
+                      <Row>
+                          {projects2.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
+                      {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p> */}
+                    </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>
+                        {/* <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Cumque quam, quod neque provident velit, rem
                           explicabo excepturi id illo molestiae blanditiis,
                           eligendi dicta officiis asperiores delectus quasi
                           inventore debitis quo.
-                        </p>
+                        </p> */}
+                        
                         <Row>
-                          {projects2.map((project, index) => {
+                          {projects3.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>
